@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   root 'dashboard#show'
 
+  resources :races, only: [:new, :create, :show, :index]
+  resources :char_classes, only: [:new, :create, :show, :index]
+  resources :spells, only: [:new, :create, :show, :index]
+  resources :items, only: [:new, :create, :show, :index]
+
   namespace 'api' do
     namespace 'v1' do
 
