@@ -9,8 +9,8 @@ Rails.application.routes.draw do
   namespace 'api' do
     namespace 'v1' do
 
-      get '/player_characters' to: 'player_characters#index'
-      get '/player_characters/:id' to: 'player_characters#show' #gets one player_character by id, later implementations will have by name
+      get '/player_characters', to: 'player_characters#index'
+      get '/player_characters/:id', to: 'player_characters#show' #gets one player_character by id, later implementations will have by name
 
       get '/races', to: 'races#index' #gets all races
       get '/races/:id', to: 'races#show' #gets one race by id, later implementations will have by name
@@ -30,8 +30,8 @@ Rails.application.routes.draw do
       # add sort by casting time
       # add sort by concentration?
 
-      get '/adventuring_items', to: 'adventuring_items#index' #gets all adventuring_items
-      get '/adventuring_items/:id', to: 'adventuring_items#show' #gets one adventuring_item by id, later implementations will have by name
+      get '/items', to: 'items#index' #gets all items
+      get '/items/:id', to: 'items#show' #gets one item by id, later implementations will have by name
       # add sort by type
       # add sort by rarity
 
